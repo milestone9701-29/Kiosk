@@ -49,7 +49,7 @@ public class Kiosk { //출력, 생성자, null
         }
     }
     private void showItem(MenuItem m) {
-        System.out.printf("%n선택: %s (W %.1f)%n", m.getName(), m.getPrice());
+        System.out.printf("%n선택: %s (W %3.1f)%n", m.getName(), m.getPrice());
         System.out.println(m.getDesc());
     }
     private Integer toInt(String s) {

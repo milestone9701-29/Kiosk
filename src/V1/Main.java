@@ -43,7 +43,7 @@ public class Main {
 
             // 메시지 출력
             int i = idx - 1;
-            System.out.printf("%n선택: %s (W %.1f)%n", NAMES[i], PRICES[i]);
+            System.out.printf("%n선택: %s (W %3.1f)%n", NAMES[i], PRICES[i]);
             System.out.println(DESC[i]);
             System.out.println("\n엔터를 누르면 메뉴로 돌아갑니다...");
             s.nextLine();

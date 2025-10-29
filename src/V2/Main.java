@@ -43,7 +43,7 @@ public class Main {
             }
 
             MenuItem chosen = menuItems.get(idx-1);
-            System.out.printf("%n선택: %s (W %.1f)%n", chosen.getName(), chosen.getPrice());
+            System.out.printf("%n선택: %s (W %3.1f)%n", chosen.getName(), chosen.getPrice());
             System.out.println(chosen.getDesc());
 
             System.out.println("\n엔터를 누르면 메뉴로 돌아갑니다.");

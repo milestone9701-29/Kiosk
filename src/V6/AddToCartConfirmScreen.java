@@ -15,7 +15,7 @@ public class AddToCartConfirmScreen implements Screen {
 
     @Override
     public void render() {
-        System.out.printf("\"%s | W %.1f | %s\"%n", chosen.getName(), chosen.getPrice(), chosen.getDesc());
+        System.out.printf("\"%s | W %3.1f | %s\"%n", chosen.getName(), chosen.getPrice(), chosen.getDesc());
         System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
         System.out.println("1. 확인        2. 취소");
         System.out.print("> ");

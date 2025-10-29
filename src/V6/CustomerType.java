@@ -1,9 +1,9 @@
 package V6;
 public enum CustomerType {
-    NATIONAL_HERO("국가유공자", 0.10), // 왜 0.10이지?
+    NATIONAL_HERO("국가유공자", 0.10), // 가독성을 위한 0.00 표기.
     SOLDIER("군인", 0.05),
     STUDENT("학생", 0.03),
-    REGULAR("일반", 0.00); // 문자열 들어가서 그런가?
+    REGULAR("일반", 0.00);
 
     private final String label;
     private final double discountRate;

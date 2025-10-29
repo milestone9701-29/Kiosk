@@ -28,3 +28,22 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# IntelliJ / IDEA
+.idea/
+*.iml
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# OS garbage
+.DS_Store
+Thumbs.db
+
+# build / logs
+target/
+*.log

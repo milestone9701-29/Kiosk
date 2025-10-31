@@ -16,7 +16,6 @@ public class MenuItem {
         this.desc = desc == null ? "" : desc;
     }
 
-
     // R
     public String getName() {
         return name;

@@ -22,7 +22,7 @@ public class Main {
         desserts.addItem(new MenuItem("Frites", 2.5, "짜요."));
         desserts.addItem(new MenuItem("Fish and Chips", 4.2, "맛있겠다."));
 
-        List<Menu> mainMenus = new ArrayList<>();
+        List<Menu> mainMenus = new ArrayList<>(); //List.of
         mainMenus.add(burgers);
         mainMenus.add(drinks);
         mainMenus.add(desserts);

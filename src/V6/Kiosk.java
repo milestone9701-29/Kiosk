@@ -39,7 +39,7 @@ public class Kiosk {
     // 추가
     public void addToCart(MenuItem chosen) {
         for (CartItem ci : cart) {
-            if (ci.getItem().getName().equals(chosen.getName())) {
+            if (ci.getItem().getId().equals(chosen.getId())) {
                 ci.incrementQuantity(); // Quantity++
                 return;
             }

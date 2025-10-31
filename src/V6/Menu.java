@@ -29,4 +29,14 @@ public class Menu {
         if (m == null) throw new IllegalArgumentException();
         items.add(m);
     }
+    // Util : ID로 품절 토글 : 임시.
+    public boolean setAvailableById(String id, boolean value) {
+        for (MenuItem m : items) {
+            if (m.getId().equals(id)) {
+                m.setAvailable(value);
+                return true;
+            }
+        }
+        return false;
+    }
 }

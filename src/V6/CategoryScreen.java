@@ -12,13 +12,15 @@ public class CategoryScreen implements Screen {
         this.menu = menu;
     }
 
+    // 품절 라벨 표기.
     @Override
     public void render() {
         System.out.printf("[ %s MENU ]%n%n", menu.getCategoryName().toUpperCase()); // 대문자.
         List<MenuItem> items = menu.getItems();
         for (int i=0;i<items.size();i++) {
             MenuItem m= items.get(i);
-            System.out.printf("%d. %-14s | W %3.1f | %s%n", i + 1, m.getName(), m.getPrice(), m.getDesc());
+            String sold = m.isAvailable() ? "" : " [SOLD OUT]";
+            System.out.printf("%d. %-14s | W %3.1f | %s%s%n", i + 1, m.getName(), m.getPrice(), m.getDesc(), sold);
         }
         System.out.println("0. 뒤로가기");
         System.out.print("> ");
@@ -43,9 +45,11 @@ public class CategoryScreen implements Screen {
             return this;
         }
 
-        MenuItem chosen = items.get(idx - 1); // 추가
-        // 다음 화면 AddToCartComfirmScreen으로.
-        return new AddToCartConfirmScreen(kiosk, chosen, this);
+        MenuItem chosenItem = items.get(idx - 1); // 추가
+        if (!chosenItem.isAvailable()) {
+            return new SoldOutScreen(kiosk, chosenItem, this);
+        } // 다음 화면 AddToCartComfirmScreen으로.
+        return new AddToCartConfirmScreen(kiosk, chosenItem, this);
     }
     private Integer toInt(String s) {
         try { return Integer.parseInt(s); }
